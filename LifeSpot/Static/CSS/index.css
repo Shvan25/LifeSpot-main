@@ -100,3 +100,41 @@ input {
 input:focus {
     border: 2px solid dimgrey;
 }
+.slider {
+    position: relative;
+    width: 100%; /* или укажите нужную ширину */
+    overflow: hidden; /* скрывает все, что выходит за границы */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+        display: block;
+}
+
+.slider-prev, .slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
+}
